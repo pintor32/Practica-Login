@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {title: 'login' }) %>
+
+    <body>
+        <%- include('partials/nav', {navtitle: 'Leo' }) %>
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+        <p>Email</p>
+        <input type="text" name="email">
+        <% if (locals.errors && errors.email) {%>
+            <div>
+                <%= errors.email.msg %> 
+            </div>
+        <% } %> 
+        <br><br>
+        <p>Contraseña</p>
+        <input type="password" name="password"><br><br>
+        <a href="/register"><strong>¿No tienes cuenta? Registrate</strong></a><br><br>
+        <p>
+            <button type="submit">Iniciar sesión</button>
+        </p>
+    </form>
+</body>
+</html>

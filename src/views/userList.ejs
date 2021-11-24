@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {title: 'Registro' }) %>
+
+    <body>
+        <%- include('partials/nav', {navtitle: 'Leo' }) %>
+            <div>
+                <div>
+                    <div>
+                        <h2>Todos los productos</h2>
+                    </div>
+                    <table class="userTable">
+                        <thead>
+                            <td>
+                                <h3>Id</h3>
+                            </td>
+                            <td>
+                                <h3>Nombre</h3>
+                            </td>
+                            <td>
+                                <h3>Apellido</h3>
+                            </td>
+                            <td>
+                                <h3>Email</h3>
+                            </td>
+                            <td>
+                                <h3>Rol</h3>
+                            </td>
+                            <td><a href='./register'> Crear nuevo </a></td>
+                        </thead>
+                        <tbody>
+                            <% usersDB.forEach(user=> { %>
+                                <tr>
+                                    <td>
+                                        <%= user.id %>
+                                    </td>
+                                    <td>
+                                        <%= user.first_name %>
+                                    </td>
+                                    <td>
+                                        <%= user.last_name %>
+                                    </td>
+                                    <td>
+                                        <%= user.email %>
+                                    </td>
+                                    <td>
+                                        <%= user.category %>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+    </body>
+
+</html>

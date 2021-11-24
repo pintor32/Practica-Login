@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('partials/head', {title: 'Perfil'}) %>
+  <body>
+    <%- include('partials/nav', {navtitle: 'Leo'}) %>
+    <h2>Hola!! <%= user.first_name %> <%= user.last_name %></h2>
+    <p>Id: <%= user.id %> </p>
+    <p>Email: <%= user.email %> </p>
+    <p>Rol: <%= user.category %> </p>
+  </body>
+</html>
